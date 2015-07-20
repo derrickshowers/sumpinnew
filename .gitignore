@@ -5,6 +5,7 @@
 styles.css.map
 .sass-cache/
 bower_components/
+css/
 
 # npm
 node_modules/
