@@ -2,6 +2,7 @@
 .bowerrc
 
 # sass
+styles.css.map
 .sass-cache/
 bower_components/
 
