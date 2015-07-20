@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="700px" height="700px" viewBox="0 0 700 700" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>checkmark</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="700" height="700"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="checkmark" sketch:type="MSLayerGroup">
+            <mask id="mask-2" sketch:name="Mask Copy" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask-Copy" fill="#36AA40" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+            <path d="M614.92457,161.375768 L544.166317,105.568257 C541.97526,103.763857 539.268661,102.475 536.175404,102.475 C533.082147,102.475 530.246661,103.763857 528.055604,105.697143 L270.670847,436.417866 C270.670847,436.417866 169.495568,339.109158 166.660082,336.273672 C163.824596,333.438187 160.086911,328.669416 154.41594,328.669416 C148.744969,328.669416 146.167255,332.664872 143.202883,335.629244 C141.011826,337.949186 104.923828,375.841584 87.1376009,394.658897 C86.1065152,395.818869 85.4620867,396.463297 84.5598867,397.365497 C83.0132583,399.556554 81.9821726,402.005383 81.9821726,404.711983 C81.9821726,407.547468 83.0132583,409.867411 84.5598867,412.058468 L88.1686865,415.409496 C88.1686865,415.409496 267.706476,587.858572 270.670847,590.822943 C273.635219,593.787315 277.244018,597.525 282.528332,597.525 C287.683761,597.525 291.936989,591.982915 294.385817,589.534086 L615.440113,177.099824 C616.986742,174.908767 618.017827,172.459939 618.017827,169.624453 C618.017827,166.402311 616.72897,163.695711 614.92457,161.375768 L614.92457,161.375768 Z" id="Shape" fill="#FFFFFF" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+        </g>
+    </g>
+</svg>
