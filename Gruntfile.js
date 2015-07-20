@@ -41,7 +41,7 @@ module.exports = function(grunt) {
           dest: 'dshowers@dev.derrickshowers.com:/var/www/sites/sumpinnew/',
           src: '/Users/dshowers/Development/sumpin-new/<%= config.paths.base %>/',
           ssh: true,
-          delete: false
+          delete: true
         }
       }
     },
