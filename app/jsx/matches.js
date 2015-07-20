@@ -35,15 +35,15 @@ var SumpinNew = SumpinNew || {};
     render: function() {
       var matchNodes = this.state.interestingVenues.map(function(venue) {
         return (
-          <li><a target="_blank" href={"https://foursquare.com/v/" + venue.id}>venue.name</a></li>
+          <li><a target="_blank" href={"https://foursquare.com/v/" + venue.id}>{venue.name}</a></li>
         );
       }.bind(this));
       return (
         <div>
-          <button className="count-btn" onClick={this.toggleMatches}>this.state.interestingVenues.length</button>
+          <button className="count-btn" onClick={this.toggleMatches}>{this.state.interestingVenues.length}</button>
           <ul>
             <li>{ matchNodes }</li>
-            <li><button className="remove-all-btn" onClick={this.removeAllMatches}>Remove all</button>
+            <li><button className="remove-all-btn" onClick={this.removeAllMatches}>Remove all</button></li>
           </ul>
         </div>
       );

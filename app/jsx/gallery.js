@@ -118,7 +118,7 @@ var SumpinNew = SumpinNew || {};
       });
       var interestingVenues = this.state.interestingVenues.map(function(venue) {
         return (
-          <p>{venue.name}<p>
+          <p>{venue.name}</p>
         );
       });
       return (

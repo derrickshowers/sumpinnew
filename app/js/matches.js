@@ -42,7 +42,7 @@ var SumpinNew = SumpinNew || {};
         React.createElement("div", null, 
           React.createElement("button", {className: "count-btn", onClick: this.toggleMatches}, this.state.interestingVenues.length), 
           React.createElement("ul", null, 
-            matchNodes, 
+            React.createElement("li", null,  matchNodes ), 
             React.createElement("li", null, React.createElement("button", {className: "remove-all-btn", onClick: this.removeAllMatches}, "Remove all"))
           )
         )

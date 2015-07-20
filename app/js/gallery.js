@@ -66,7 +66,6 @@ var SumpinNew = SumpinNew || {};
       }
     },
     recHasBeenVoted: function() {
-      console.log('recHasBeenVoted');
       var venueId = $('.gallery-view ul li').last().children('img').data('venue-id'),
           newInterestingVenues = JSON.parse(localStorage.getItem('interestingVenues')) || [],
           duplicate = false;
@@ -112,7 +111,7 @@ var SumpinNew = SumpinNew || {};
     render: function() {
       var photoNodes = this.state.venues.map(function(venue, index) {
         return (
-          React.createElement("li", null,
+          React.createElement("li", null, 
             React.createElement(SumpinNew.Photo, {venueId: index, url: "https://api.foursquare.com/v2/venues/" + venue.id + "/photos?v=20131016&group=venue&client_id=S5YFDUCNUFVRNLBVXN4X4NLALQZ2HVX1UEUXRQ0SO4CJU54G&client_secret=VRZQLEP5QMSOIXEUXXI00C2XMMBVFPFHT4BJ0BNCE3CYNXWL"})
           )
         );
@@ -122,18 +121,13 @@ var SumpinNew = SumpinNew || {};
           React.createElement("p", null, venue.name)
         );
       });
-      var loadingNode = function() {
-        return (
-          React.createElement("p", {className: "progress"}, "Churning up some recommendations...")
-        );
-      };
       return (
-        React.createElement("div", {className: "gallery-view"},
-          React.createElement("img", {className: "no-symbol", src: "img/no.svg"}),
-          React.createElement("img", {className: "yes-symbol", src: "img/yes.svg"}),
-          React.createElement("div", {className: "progress-text"},
+        React.createElement("div", {className: "gallery-view"}, 
+          React.createElement("img", {className: "no-symbol", src: "img/no.svg"}), 
+          React.createElement("img", {className: "yes-symbol", src: "img/yes.svg"}), 
+          React.createElement("div", {className: "progress-text"}, 
             React.createElement("p", null, "Churning up some recommendations...")
-          ),
+          ), 
           React.createElement("ul", null,  photoNodes )
         )
       );

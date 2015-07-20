@@ -16,23 +16,29 @@ var SumpinNew = SumpinNew || {};
     );
   }
 
+  function error() {
+    window.alert('For some reason we couldn\'t get your location. Either refresh the page to try again, or just click \`Ok\` to continue with places in San Francisco');
+    locationString = 'near=San%20Francisco';
+    render();
+  }
+
   function init() {
-    if ("geolocation" in navigator) {
+    if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition(
         function(position) {
           locationString = 'll=' + position.coords.latitude + ',' + position.coords.longitude;
           render();
         },
         function(error) {
-          locationString = 'near=San%20Francisco';
-          render();
+          console.warn('error: ', error);
+          error();
         },
         {
           timeout: 5000
         });
     } else {
-      locationString = 'near=San%20Francisco';
-      render();
+      console.warn('brower does not seem to support geolocation');
+      error();
     }
   }
 
