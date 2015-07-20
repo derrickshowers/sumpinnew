@@ -7,3 +7,6 @@ bower_components/
 
 # npm
 node_modules/
+
+# jsx
+.module-cache
