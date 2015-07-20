@@ -66,7 +66,6 @@ var SumpinNew = SumpinNew || {};
       }
     },
     recHasBeenVoted: function() {
-      console.log('recHasBeenVoted');
       var venueId = $('.gallery-view ul li').last().children('img').data('venue-id'),
           newInterestingVenues = JSON.parse(localStorage.getItem('interestingVenues')) || [],
           duplicate = false;
@@ -112,30 +111,25 @@ var SumpinNew = SumpinNew || {};
     render: function() {
       var photoNodes = this.state.venues.map(function(venue, index) {
         return (
-          React.createElement("li", null,
-            React.createElement(SumpinNew.Photo, {venueId: index, url: "https://api.foursquare.com/v2/venues/" + venue.id + "/photos?v=20131016&group=venue&client_id=S5YFDUCNUFVRNLBVXN4X4NLALQZ2HVX1UEUXRQ0SO4CJU54G&client_secret=VRZQLEP5QMSOIXEUXXI00C2XMMBVFPFHT4BJ0BNCE3CYNXWL"})
-          )
+          <li>
+            <SumpinNew.Photo venueId={index} url={"https://api.foursquare.com/v2/venues/" + venue.id + "/photos?v=20131016&group=venue&client_id=S5YFDUCNUFVRNLBVXN4X4NLALQZ2HVX1UEUXRQ0SO4CJU54G&client_secret=VRZQLEP5QMSOIXEUXXI00C2XMMBVFPFHT4BJ0BNCE3CYNXWL"} />
+          </li>
         );
       });
       var interestingVenues = this.state.interestingVenues.map(function(venue) {
         return (
-          React.createElement("p", null, venue.name)
+          <p>{venue.name}<p>
         );
       });
-      var loadingNode = function() {
-        return (
-          React.createElement("p", {className: "progress"}, "Churning up some recommendations...")
-        );
-      };
       return (
-        React.createElement("div", {className: "gallery-view"},
-          React.createElement("img", {className: "no-symbol", src: "img/no.svg"}),
-          React.createElement("img", {className: "yes-symbol", src: "img/yes.svg"}),
-          React.createElement("div", {className: "progress-text"},
-            React.createElement("p", null, "Churning up some recommendations...")
-          ),
-          React.createElement("ul", null,  photoNodes )
-        )
+        <div className="gallery-view">
+          <img className="no-symbol" src="img/no.svg" />
+          <img className="yes-symbol" src="img/yes.svg" />
+          <div className="progress-text">
+            <p>Churning up some recommendations...</p>
+          </div>
+          <ul>{ photoNodes }</ul>
+        </div>
       );
     }
   });

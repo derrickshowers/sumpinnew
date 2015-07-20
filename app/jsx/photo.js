@@ -27,7 +27,7 @@ var SumpinNew = SumpinNew || {};
     },
     render: function() {
       return (
-        React.createElement("img", {draggable: "false", src: this.state.photoUrl, "data-venue-id": this.props.venueId})
+        <img draggable="false" src={this.state.photoUrl} data-venue-id=this.props.venueId />
       );
     }
   });

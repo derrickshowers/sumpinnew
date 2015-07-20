@@ -35,17 +35,17 @@ var SumpinNew = SumpinNew || {};
     render: function() {
       var matchNodes = this.state.interestingVenues.map(function(venue) {
         return (
-          React.createElement("li", null, React.createElement("a", {target: "_blank", href: "https://foursquare.com/v/" + venue.id}, venue.name))
+          <li><a target="_blank" href={"https://foursquare.com/v/" + venue.id}>venue.name</a></li>
         );
       }.bind(this));
       return (
-        React.createElement("div", null, 
-          React.createElement("button", {className: "count-btn", onClick: this.toggleMatches}, this.state.interestingVenues.length), 
-          React.createElement("ul", null, 
-            matchNodes, 
-            React.createElement("li", null, React.createElement("button", {className: "remove-all-btn", onClick: this.removeAllMatches}, "Remove all"))
-          )
-        )
+        <div>
+          <button className="count-btn" onClick={this.toggleMatches}>this.state.interestingVenues.length</button>
+          <ul>
+            <li>{ matchNodes }</li>
+            <li><button className="remove-all-btn" onClick={this.removeAllMatches}>Remove all</button>
+          </ul>
+        </div>
       );
     }
   });
